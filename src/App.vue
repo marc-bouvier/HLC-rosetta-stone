@@ -58,7 +58,7 @@ const appendGlyph = (word) => {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);">
-      <figure v-for="word in words" @click="appendGlyph(word)" style="pointer">
+      <figure v-for="word in words" @click="appendGlyph(word)" style="cursor: pointer">
 
         <img :src="`symbols/${word}.png`" style="height: 4rem"
         />
