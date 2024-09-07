@@ -22,7 +22,7 @@ const appendGlyph = (word)=>{
     <div style="display: flex;flex-wrap: wrap;">
       <figure v-for="word in words"  @click="appendGlyph(word)">
 
-      <img  :src="'/symbols/'+word+'.png'" style="width: 50%"
+      <img  :src="'symbols/'+word+'.png'" style="width: 50%"
      />
         <figcaption>{{word}}</figcaption>
       </figure>
