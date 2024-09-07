@@ -54,10 +54,13 @@ const appendGlyph = (word) => {
     <textarea v-model="hexMessage" cols="160"></textarea>
     <p>{{ hexOutput }}</p>
     <p>{{ englishOutput }}</p>
-    <div style="display: flex;flex-wrap: wrap;">
+    <div style="  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);">
       <figure v-for="word in words" @click="appendGlyph(word)" style="pointer">
 
-        <img :src="`symbols/${word}.png`" style="width: 20%"
+        <img :src="`symbols/${word}.png`" style="height: 4rem"
         />
         <figcaption>{{ word }} - {{englishMapping[word]}}</figcaption>
       </figure>
